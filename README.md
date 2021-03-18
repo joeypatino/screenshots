@@ -1,3 +1,6 @@
+### Screenshots
+This script requires [xcparse](https://github.com/ChargePoint/xcparse) in order to extract the screenshots from the `.xcresult` package.
+
 ```
 Info:
 
