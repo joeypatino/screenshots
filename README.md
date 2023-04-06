@@ -1,27 +1,35 @@
-### Screenshots
-This script requires [xcparse](https://github.com/ChargePoint/xcparse) in order to extract the screenshots from the `.xcresult` package.
+## Screenshots
 
+This bash script automates the extraction of screenshots from an Xcode test result (.xcresult) package. It requires the [xcparse](https://github.com/ChargePoint/xcparse) tool, which is used to extract the screenshots.
+
+### Requirements
+- [xcparse](https://github.com/ChargePoint/xcparse)
+- Bash shell
+
+### Usage
+
+Runs unit tests and extracts captured images to the ./screenshots directory relative to the Xcode project or workspace.
+
+```bash
+$ ./screenshots.sh --argument <Options>
+
+  --project  The name of the Xcode project.
+  --workspace  The name of the Xcode workspace.
+  --scheme  The project scheme to build.
+  --testLanguage  The language to run the simulator/unit tests in.
+  --argument  A command line argument that will be passed directly to your unit tests. You should wrap the argument in quotes. You may pass as many arguments as needed.
+  --usage  Prints usage information.
 ```
-Info:
 
-     Runs Unit tests and extracts any captured images to the ./screenshots directory, relative to the xcode project or workspace.
 
-Usage:
+## Contributing
 
-     $./screenshots.sh --argument CommandLineArgument
+Bug reports and pull requests are welcome on GitHub at https://github.com/joeypatino/screenshots. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-Options:
+### Meta
 
-    --project		 The name of the Xcode project
+Joey Patino – @nsinvalidarg – joey.patino@pm.me
 
-    --workspace		 The name of the Xcode workspace
+### License
 
-    --scheme		 the project Scheme to build
-
-    --argument		 Command line argument that will be passed directly to your Unit tests.
-        		 You should wrap the argument in quotes. You may pass as many arguments as needed.
-
-    --testLanguage	 the language to run the simulator / unit tests in.
-
-    --usage		 Prints this usage information
-```
+screenshots is available as open source under the terms of the MIT License.
